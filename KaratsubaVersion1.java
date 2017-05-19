@@ -3,7 +3,7 @@
  */
 
 /**
- * This algorithm will be suitable for long datatype numbers multiplication;
+ * This algorithm will be suitable for multiplying numbers that fit into long data type.
  *
  */
 public class KaratsubaVersion1 {
@@ -42,7 +42,7 @@ public class KaratsubaVersion1 {
 
     public static void main(String args[]) {
         KaratsubaVersion1 o = new KaratsubaVersion1();
-        long result = o.multiply(100, 10);
+        long result = o.multiply(102, 102);
         System.out.println(result);
     }
 }
