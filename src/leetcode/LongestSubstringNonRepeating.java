@@ -9,7 +9,7 @@ public class LongestSubstringNonRepeating {
         }
 
         private int windowSolution(String s) {
-            int maxLength = 0;a
+            int maxLength = 0;
             int n = s.length();
             int i = 0;
             int j = 1;
