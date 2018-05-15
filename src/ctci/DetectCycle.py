@@ -18,7 +18,7 @@ class Solution:
                    visited_nodes.add(A)
                    A = A.next    
                 
-   
+    # Using slow and fast pointer approach 
     def detectCycle_v2(self, A):
         if not A or not A.next:
             return None
