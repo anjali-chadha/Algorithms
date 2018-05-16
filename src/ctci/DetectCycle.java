@@ -13,6 +13,7 @@ InterviewBit: LISTCYCLE
  * }
  */
 public class Solution {
+	//Using Floyd's Cycle-Finding Algorithm
 	public ListNode detectCycle(ListNode a) {
 	    if(a == null || a.next == null) return null;
 	    
