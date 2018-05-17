@@ -13,8 +13,23 @@ InterviewBit: LISTCYCLE
  * }
  */
 public class Solution {
+	// Using HashSet (extra space used)
+	public ListNode detectCycle_v1(ListNode a) {
+	    if(a == null || a.next == null) return null;
+	    
+	    HashSet<ListNode> nodeSet = new HashSet<>();
+	    ListNode node = a;
+	    while(node != null) {
+	        if(nodeSet.contains(node)) return node;
+	        nodeSet.add(node);
+	        node = node.next;
+	    }
+	    return null;
+	}	
+	
 	//Using Floyd's Cycle-Finding Algorithm
-	public ListNode detectCycle(ListNode a) {
+	// Space Complexity - O(1)
+	public ListNode detectCycle_v2(ListNode a) {
 	    if(a == null || a.next == null) return null;
 	    
 	    ListNode slow = a;
