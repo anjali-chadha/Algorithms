@@ -7,13 +7,25 @@
 class Solution:
     # @param A : head node of linked list
     # @return the first node in the cycle in the linked list
-    def detectCycle(self, A):
-        if A is None or A.next is None:
+    
+    # Using Extra memory    
+     def detectCycle_v1(self, A):
+           visited_nodes = set()
+           while A:
+               if A in visited_nodes:
+                   return A
+               else:
+                   visited_nodes.add(A)
+                   A = A.next    
+                
+   
+    def detectCycle_v2(self, A):
+        if not A or not A.next:
             return None
             
         slow = A
         fast = A
-        while not slow is None and not fast is None and not fast.next is None:
+        while slow and fast and fast.next:
             slow = slow.next
             fast = fast.next.next
             if slow == fast:
