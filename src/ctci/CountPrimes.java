@@ -8,6 +8,7 @@ Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
 */
 
 class Solution {
+    //Using Sieve of Erastosthenes
     public int countPrimes(int n) {
         //Corner Cases
         if(n <= 1) return 0;
