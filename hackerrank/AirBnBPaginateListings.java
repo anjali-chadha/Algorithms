@@ -62,5 +62,48 @@ class Solution {
             System.out.println(s);
         return result.stream().toArray(String[]::new);
     }
+
+    //Optimized implementation using LinkedList-
+    public static String[] paginateHostListings_v2(int n, String[] content) {
+        //Tracks current hosts in a single page
+		Set<String> hostPage = new HashSet<>();
+        
+        LinkedList<String> input = new LinkedList<>(Arrays.asList(content));
+        List<String> result = new ArrayList<>();
+
+        int inputSize = content.length;
+		int itemsInOnePage = 0;
+        
+	    while(input.size() > 0) {
+            //Create a new iterator
+            Iterator<String> iter = input.iterator();
+           
+            while(iter.hasNext()) {
+                //Check if the current Page is filled already
+                if(itemsInOnePage == inputSize) {
+                    itemsInOnePage = 0;
+                    break; //Start traversal from the beginning by creating new iterator.
+                }      
+                
+                String e = iter.next();
+                String[] item = e.split(",");
+                String hostId = item[0];
+
+                //Check if hostId is already present in the current list
+                if(hostPage.contains(hostId)) {
+                    continue;
+                } else {
+                    result.add(e);
+                    iter.remove();
+                    hostPage.add(hostId);
+                    itemsInOnePage++;
+                }	
+            }
+            hostPage.clear(); 
+        }
+        for(String s: result)
+            System.out.println(s);
+        return result.stream().toArray(String[]::new);
+    }
 }
    
