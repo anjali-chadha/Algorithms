@@ -1,0 +1,31 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ https://leetcode.com/problems/path-sum-iii/submissions/
+ */
+class Solution {
+    public int pathSum(TreeNode root, int sum) {
+        if(root == null) return 0;
+        
+        return pathSumHelper(root, sum);
+    }
+    
+    private int pathSumHelper(TreeNode node, int sum) {
+        if(node == null) return 0;
+            
+        return pathSumHelper(node.left, sum) 
+            + pathSumHelper(node.right, sum)
+            + pathSumIncluding(node, sum);
+    }
+    
+    private int pathSumIncluding(TreeNode node, int sum) {
+        if(node == null) return 0;
+        return (node.val == sum? 1: 0) + pathSumIncluding(node.right, sum - node.val) 
+            + pathSumIncluding(node.left, sum - node.val);
+    }
+}
