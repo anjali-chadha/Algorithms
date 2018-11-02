@@ -7,7 +7,7 @@ Time Complexity: O(MN * 3^K) where K is the length of the input word & MN are bo
 Explanation: We start the word search over all n^2 nodes. For the first letter of the word search
 we can move in 4 directions but for every later one there are only three options (you can't move back onto yourself)."
 
-Space Compelxit:
+Space Compelxity: O(K) where K represents the length of the word
 Stack space used while recursion
 
 Questions:
