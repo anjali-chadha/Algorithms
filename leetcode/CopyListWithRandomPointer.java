@@ -14,6 +14,10 @@
  *
  * Algorithm 2 - Space Complexity Reduced to O(1)
  * Modifying the original linked list
+ *
+ * Algorithm 3: Consider the linkedlist as a graph and clone it.
+ * Keep an eye for cycles as we might encounter same node again because of random pointers
+ * Traverse in DFS manner
  **/
 public class Solution {
     public RandomListNode copyRandomList(RandomListNode head) {
@@ -44,8 +48,7 @@ public class Solution {
     // Algorithm 2
     public RandomListNode copyRandomList2(RandomListNode head) {
         if(head == null) return null;
-       
-        
+         
         RandomListNode ptr = head;
         
         // Pass1 - Insert new nodes into original LL
