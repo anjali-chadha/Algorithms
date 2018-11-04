@@ -1,3 +1,11 @@
+/*
+Algorithm 1: Using extra result array (Space sub-optimal)
+Time Complexity - O(N)
+
+Algorithm 2: Two pointer approach
+Current Pointer and LastNonZeroElement Pointer
+Keep Swapping them when even a non zero element is found
+*/
 package leetcode;
 
 public class MoveZeros {
