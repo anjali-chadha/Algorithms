@@ -1,4 +1,16 @@
+/*
+Algorithm 1: sorting
+Time - O(N log N), Space - O(N)
+
+Algorithm 2: Heap
+Using Heap
+Time - O(N log K)
+Space O(N)
+
+*/
 class Solution {
+    
+    //Algorithm 1
     public List<String> topKFrequent1(String[] words, int k) {
         List<String> result = null;
         if(words == null || words.length == 0) return result;
@@ -15,6 +27,7 @@ class Solution {
         return result.subList(0, k);
     }
     
+    //Algorithm 2
     public List<String> topKFrequent2(String[] words, int k) {
         List<String> result = null;
         if(words == null || words.length == 0) return result;
