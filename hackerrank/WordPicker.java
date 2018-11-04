@@ -1,6 +1,5 @@
 //"I would like you to write a program which is run on the command line. The program takes two arguments: the name of a file containing words, each separated by a newline, and a list of letters. 
 //The program should output the longest words from the file which can be made using the letters in the list."
-//Uber ATG Interview
 
 //Only small case alphatetical lettter
 // Input - fileName, "uberattgg" 
