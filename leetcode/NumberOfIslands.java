@@ -13,6 +13,8 @@ Time Complexity - Same as DFS - O(MN + 4*MN) = O(Vertices + Edges) = O(MN)
 Space Complexity - O(1) //No Extra space used
 However modifying the original input which is not recommended. 
 Alternative is to use a visited boolean 2D array
+
+Algorithm 2: Use Union Find
 */
 
 class Solution {
