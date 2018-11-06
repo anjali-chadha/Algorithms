@@ -3,6 +3,9 @@
 * Algorithm: Time/space Complexity O(N)
 * Greedy Optimisation - When you make a decision, you never change it.
 *
+* Two-Pass Algorithm -
+* 1) Store the last indices of each chanracter appearing in the string
+* 2) Update the end pointer of a substring using the above map
 **/
 
 class Solution {
