@@ -1,6 +1,9 @@
 /*
 Approach 1: Bottom Up recursion
 Using a global variable to track the current node in linked list
+Time Complexity - O(N)
+Space Complexity - O(log N) - stack space
+Very similar to binary search
 
 */
 
